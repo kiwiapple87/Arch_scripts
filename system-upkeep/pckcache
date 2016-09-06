@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# This script will clean out the pacman package cache. 
+
+pacman -Sc
+
+# Warning:
+# Only do this when certain that previous package versions are not required, for example for a later downgrade. 
+# pacman -Sc only leaves the versions of packages which are currently installed available, 
+# older versions would have to be retrieved through other means, such as the Archive.
+
+# Use this script as a post update script --  maybe add it to the end of the sysupdate.
