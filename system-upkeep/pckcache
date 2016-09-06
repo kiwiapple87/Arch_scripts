@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script will clean out the pacman package cache and delete any orphans and their config files. 
+# This script will clean out the pacman package cache in /var/cache/pacman/pkg/ and delete any orphans and their config files. 
 
 sudo pacman -Sc
 
