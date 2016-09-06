@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#This will generate a file with any faild systemd services
+
+systemctl --failed > ~/usr/logs/failedservices.txt
