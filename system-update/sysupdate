@@ -32,7 +32,7 @@ yaourt -Syu --aur
 # strace (http://man7.org/linux/man-pages/man1/strace.1.html)
 
 # lslocks (http://man7.org/linux/man-pages/man8/lslocks.8.html)
-
+# research 'lslocks' and see if it is possible to pull the PID's of the services causing locks into a variable so that this script can auto kill those process making for a more seamless backup.
 
 # Make script Bash executable command
 
