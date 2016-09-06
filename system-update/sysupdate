@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# This scipt will do a full system backup to the network drive then do a system update as well as update AUR packages.
+
+# Full System Backup
+sudo rsync -a --progress --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} / /mnt/nas-pri/archlinux/archsys 2> ~/usr/logs/bckuperr.txt
+
+# System Update with AUR updates
+yaourt -Syu --aur
+
+
+
+
+# Information about stuff in the script (attributes of commands; auto backup CRON information; commands to locate issues 
+# strace and lslocks] and PID's # that cause rsync to hang)
+
+# -a, --archive               archive mode
+# -A, --acls                  preserve ACLs
+# -X, --xattrs                preserve extended attributes
+# -v, --verbose               increase verbosity
+
+# Using the -aAX set of options, the files are transferred in archive mode, ensuring that symbolic links, devices, permissions # and ownerships, modification times, ACLs and extended attributes are preserved (assuming that the target file system
+# supports the feature).
+
+
+# Crontab info [* is wildcard]
+# min | hour | dayofmonth | month | dayofweek
+# 0 0 * * 1 
+
+# (12:00am on mondays)
+
+# strace (http://man7.org/linux/man-pages/man1/strace.1.html)
+
+# lslocks (http://man7.org/linux/man-pages/man8/lslocks.8.html)
+
+
+# Make script Bash executable command
+
+# Create a bash script in your /usr/bin folder, it should look something like this
+
+# (#!/bin/bash)
+# Whatever combination of commands you want to run when you type this thing.
+# Its really that easy.
+
+# Just name the bash script what you want to type in to the terminal, and make it excecutable: chmod +x filename and you're 
+# good to go!
