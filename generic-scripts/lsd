@@ -1,0 +1,6 @@
+#!/bin/bash
+# this script is a personal replacement of the ls command
+# it is 'ls -alhs' 
+# which lists all, long format, size, and human readable
+
+ls -alhs
