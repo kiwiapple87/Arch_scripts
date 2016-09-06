@@ -1,8 +1,10 @@
 #!/bin/bash
 
-# This script will clean out the pacman package cache. 
+# This script will clean out the pacman package cache and delete any orphans and their config files. 
 
-pacman -Sc
+sudo pacman -Sc
+
+sudo pacman -Rns $(pacman -Qtdq)
 
 # Warning:
 # Only do this when certain that previous package versions are not required, for example for a later downgrade. 
