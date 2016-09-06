@@ -3,3 +3,5 @@
 #This will generate a file with any faild systemd services
 
 systemctl --failed > ~/usr/logs/failedservices.txt
+
+# Figure out how to use this script to output messages into conky so I can stay updated on any failed services in systemd
