@@ -1,6 +1,6 @@
 #!/bin/bash
 # this script is a personal replacement of the ls command
-# it is 'ls -alhs' 
+# it is 'ls -alhs' Can add -F to better help show directories files and executables. 
 # which lists all, long format, size, and human readable
 
 ls -alhs
