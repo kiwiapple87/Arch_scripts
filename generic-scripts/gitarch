@@ -1,7 +1,7 @@
 #!/bin/bash
-
+C=$(pwd)
+GIT='/home/alex/git/Arch_scripts'
+cd $GIT
+git pull https://github.com/kiwiapple87/Arch_scripts.git
+cd $C
 # This script will be a single command to clone https://github.com/kiwiapple87/Arch_scripts.git
-
-cd ~/git
-
-git clone https://github.com/kiwiapple87/Arch_scripts.git
