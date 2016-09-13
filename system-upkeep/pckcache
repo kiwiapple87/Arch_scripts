@@ -3,7 +3,6 @@
 # This script will clean out the pacman package cache in /var/cache/pacman/pkg/ and delete any orphans and their config files. 
 
 sudo pacman -Sc
-
 sudo pacman -Rns $(pacman -Qtdq)
 
 # Warning:
