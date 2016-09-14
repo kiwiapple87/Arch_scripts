@@ -4,7 +4,8 @@
 
 # Full System Backup
 sudo rsync -a --progress --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} / /mnt/nas-pri/archlinux/archsys 2> ~/usr/logs/bckuperr.txt
-
+# Need to add a line for rclone backup to Google Drive or Dropbox. 
+sudo rclone --stats=1m --exclude-from ~/usr/rclone/exclude_file.txt sync / drive:Archlinux 2> ~/usr/logs/rclone/rclone_errors.txt
 # System Update with AUR updates
 yaourt -Syu --aur
 
